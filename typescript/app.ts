@@ -50,7 +50,10 @@ let goodForTheJob = ( ship: Containership ) => ship.cargoContainers > 2
 console.log(`Is falcon good for the job? ${goodForTheJob (falcon) ? 'yes' : 'no' }`)
 
 
+// Importando uma Biblioteca em JS 
+import * as _ from 'lodash'
 
+console.log(_.pad("Typescript Examples", 40, "="))
 
 
 
