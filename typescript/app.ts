@@ -13,9 +13,12 @@ favoriteDroid = "K-2SO"
 console.log("My favorite droid is " + favoriteDroid)
 
 
-let isEnoughToBeatMF = function (parsecs: number): boolean {
-	return parsecs < 12
-}
+// let isEnoughToBeatMF = function (parsecs: number): boolean {
+// 	return parsecs < 12
+// }
+
+// Arrow Function
+let isEnoughToBeatMF = (parsecs: number) : boolean => parsecs < 12
 
 let distance = 11
 
@@ -27,9 +30,13 @@ call('R2')
 
 
 // parametros padroes em TS
-function inc (speed: number, inc: number = 1): number {
-	return speed + inc
-}
+// function inc (speed: number, inc: number = 1): number {
+// 	return speed + inc
+// }
+//
+// Arrow Function
+let inc = (speed: number, inc: number = 1): number =>
+	speed + inc
 
 console.log(`ìnc (5,1) = ${inc(5,1)}`)
 console.log(`ìnc (5) = ${inc(5)}`)
