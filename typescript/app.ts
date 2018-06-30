@@ -52,9 +52,25 @@ console.log(`Is falcon good for the job? ${goodForTheJob (falcon) ? 'yes' : 'no'
 
 // Importando uma Biblioteca em JS 
 import * as _ from 'lodash'
-
 console.log(_.pad("Typescript Examples", 40, "="))
 
 
+// Default Function
+// 
+// function inc(speed: number, inc: number = 1) : number {
+//     return speed + inc
+// }
+
+// console.log(inc_af(5,1))
+// console.log(inc_af(5))
+
+// Arrow Function
+// 
+let inc_af = (speed: number, inc: number = 1) : number => {
+	return speed + inc
+}
+
+console.log(inc_af(5,1))
+console.log(inc_af(5))
 
 
