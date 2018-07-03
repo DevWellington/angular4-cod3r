@@ -8,8 +8,6 @@ import { ShoppingCartService } from './shopping-cart.service'
 })
 export class ShoppingCartComponent implements OnInit {
 
-	// shoppingCartService: ShoppingCartService
-
   constructor(
   	private shoppingCartService: ShoppingCartService
   ) { }
@@ -21,20 +19,16 @@ export class ShoppingCartComponent implements OnInit {
   	return this.shoppingCartService.items
   }
 
-  clear() {
+  clear = () => 
     this.shoppingCartService.clear()
-  }
 
-  removeItem(item: any) {
+  removeItem = (item: any) =>
     this.shoppingCartService.removeItem(item)
-  }
 
-  addItem(item: any) {
+  addItem = (item: any) =>
     this.shoppingCartService.addItem(item)
-  }
 
-  total(): number {
-  	return this.shoppingCartService.total()
-  }
+  total = (): number =>
+    this.shoppingCartService.total()
 
 }

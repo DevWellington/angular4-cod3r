@@ -6,7 +6,7 @@ export class CartItem{
 		public quantity: number = 1
 	) { }
 
-	value(): number {
-		return this.menuItem.price * this.quantity
-	}
+	value = (): number => 
+		this.menuItem.price * this.quantity
+
 }

@@ -18,29 +18,25 @@ export class RestaurantsService {
 
   constructor(private http: Http){}
 
-  restaurants(): Observable<Restaurant[]> {
-    return this.http
+  restaurants = (): Observable<Restaurant[]> =>
+    this.http
       .get(`${MEAT_API}/restaurants`)
       .map(response => response.json())
       .catch(ErrorHandler.handlerError)
-  }
-
-  restaurantById(id: string) : Observable<Restaurant> {
-  	return this.http.get(`${MEAT_API}/restaurants/${id}`)
+  
+  restaurantById = (id: string): Observable<Restaurant> =>
+  	this.http.get(`${MEAT_API}/restaurants/${id}`)
       .map(response => response.json())
       .catch(ErrorHandler.handlerError)
-  }
-
-  reviewsOfRestaurant(id: string): Observable<any> {
-    return this.http.get(`${MEAT_API}/restaurants/${id}/reviews`)
+  
+  reviewsOfRestaurant = (id: string): Observable<any> =>
+    this.http.get(`${MEAT_API}/restaurants/${id}/reviews`)
       .map(response => response.json())
-      .catch(ErrorHandler.handlerError)      
-  }
+      .catch(ErrorHandler.handlerError)
 
-  menuOfRestaurant(id: string): Observable<MenuItem[]> {
-    return this.http.get(`${MEAT_API}/restaurants/${id}/menu`)
+  menuOfRestaurant = (id: string): Observable<MenuItem[]> =>
+    this.http.get(`${MEAT_API}/restaurants/${id}/menu`)
   	  .map(response => response.json())
-      .catch(ErrorHandler.handlerError)      
-  }
+      .catch(ErrorHandler.handlerError)
 
 }
