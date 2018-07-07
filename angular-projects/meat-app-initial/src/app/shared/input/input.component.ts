@@ -19,7 +19,8 @@ export class InputComponent implements OnInit, AfterContentInit {
   ngOnInit() {
   }
 
-  ngAfterContentInit = () => {
+  // deve ser criada de acordo com a interface, nao aceitando Arrow Function
+  ngAfterContentInit(){
   	this.input = this.model
 
   	if (this.input === undefined){
