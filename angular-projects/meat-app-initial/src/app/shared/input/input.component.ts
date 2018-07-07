@@ -27,10 +27,10 @@ export class InputComponent implements OnInit, AfterContentInit {
   	}
   }
 
-  hasSuccess = () =>
+  hasSuccess = () : boolean =>
   	this.input.valid && (this.input.dirty || this.input.touched)
 
-  hasError = () =>
+  hasError = () : boolean =>
   	this.input.invalid && (this.input.dirty || this.input.touched)
 
 
